@@ -1,0 +1,22 @@
+name: Essa merda
+on:
+  push:
+    branches: 
+     - main
+  issues:
+    types: [opened, reopened]
+  schedule:
+    - cron: '11 11 * * 5'
+  workflow_dispatch:
+    inputs:
+      homedrive:
+        description: Cenas de cenas e outras cenas
+        required: true
+        default: /home
+        
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo "Hello NDC Porto"
